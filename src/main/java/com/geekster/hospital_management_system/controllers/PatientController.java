@@ -34,8 +34,8 @@ public class PatientController {
     }
 
     @GetMapping(value = "/patientId/{patientId}")
-    public ResponseEntity<List<Doctor>>suggestDoctor(@PathVariable long patientId){
-        return patientService.suggestDoctor(patientId);
+    public ResponseEntity<List<Doctor>>suggestDoctors(@PathVariable long patientId){
+        return patientService.suggestDoctors(patientId);
 
     }
 

@@ -34,7 +34,7 @@ public class PatientService {
         return new ResponseEntity<String>("Not valid data", HttpStatus.BAD_REQUEST);
     }
 
-    public ResponseEntity<List<Doctor>> suggestDoctor(long patientId) {
+    public ResponseEntity<List<Doctor>> suggestDoctors(long patientId) {
         Patient patient = patientRepo.findById(patientId)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid patient ID"));
 
